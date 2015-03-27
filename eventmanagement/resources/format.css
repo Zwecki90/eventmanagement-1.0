@@ -1,0 +1,233 @@
+﻿*
+{
+	margin: 0;
+	padding: 0;
+}
+
+html
+{
+	width: 100%;
+	height: 100%;
+}
+
+body
+{
+	width: 100%;
+	height: 100%;
+	size: 100%;
+	font-family: Arial;
+}
+
+.bold
+{
+	font-weight: bold;
+}
+
+.event-management-body-head
+{	
+	width: 100%;
+	border-bottom: 1px solid grey;
+	background-color: #E20014;
+	color: white;
+	padding: 3px 0;
+	text-align: right;
+	margin-bottom: 10px;
+}
+
+.event-management-body-content-text-container
+{
+	margin: 0 auto;
+	width: 70%;
+	padding: 10px;
+	border: 1px solid grey;
+}
+
+.event-management-body-head-login
+{
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.event-management-body-head-login-form
+{
+	display: inline-block;
+}
+
+.event-management-body-content-list
+{
+	text-align: center;
+	padding: 0 20px;
+}
+
+.event-management-body-list-event
+{
+	table-layout: fixed;
+	width: 80%;
+	margin: -1px auto 0 auto;
+	border-collapse: collapse;
+}
+
+.event-management-body-list-event th
+{
+	text-align: left;
+	padding: 5px 10px;
+	border: 1px solid grey;
+	background-color: #E20014;
+	color: white;
+	vertical-align: top;
+}
+
+.event-management-body-list-event td
+{
+	text-align: left;
+	padding: 5px 10px;
+	border: 1px solid grey;
+	vertical-align: top;
+}
+
+.event-management-body-list-event td.event-management-body-list-event-form-cell
+{
+	text-align: center;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.event-management-body-list-event td.event-management-body-list-event-index-cell
+{
+	text-align: right;
+	vertical-align: middle;
+	font-weight: bold;
+	font-size: 24pt;
+}
+
+.event-management-body label
+{
+	font-weight: bold;
+}
+
+.event-management-body input[type=text], .event-management-body input[type=password], .event-management-body input[type=email], .event-management-body input[type=number]
+{
+	background-image: none;
+	background-color: #F3F3F3;
+	border: 1px inset grey;
+	padding: 0 2px;
+	font-size: 10pt;
+	line-height: 18px;
+	width: 150px;
+}
+
+.event-management-body textarea
+{
+	background-image: none;
+	background-color: #F3F3F3;
+	border: 1px inset grey;
+	padding: 0 2px;
+	font-size: 10pt;
+	line-height: 18px;
+	width: 150px;
+	resize: none;
+}
+
+.event-management-body button, .event-management-body input[type=button], .event-management-body input[type=submit], .event-management-body input[type=reset]
+{
+	background-image: none;
+	background-color: #F3F3F3;
+	color: #E20014;
+	font-weight: bold;
+	border: 2px outset grey;
+}
+
+.event-management-body button:hover, .event-management-body input[type=button]:hover, .event-management-body input[type=submit]:hover, .event-management-body input[type=reset]:hover
+{
+	background-image: none;
+	background-color: lightgrey;
+	border: 2px inset grey;
+}
+
+.event-management-body-content-register-form table
+{
+	margin: 20px auto 0;
+	width: 70%;
+	border: 1px solid grey;
+	padding: 10px;
+}
+
+.event-management-body-content-register-form table .event-management-body-content-register-form-table-labels
+{
+	width: 180px;
+}
+
+.event-management-body-content-register-form input[type=email], .event-management-body-content-register-form input[type=password]
+{
+	width: 100%;
+}
+
+.event-management-body-content-register-form td
+{
+	padding-right: 10px;
+}
+
+.event-management-body-head-nav
+{
+	text-align: left;
+	position: absolute;
+	left: 10px;
+	font-weight: bold;
+}
+
+.event-management-body-head-nav-links
+{
+	font-variant: small-caps;
+}
+
+.event-management-body-head-nav-links a
+{
+	color: white;
+	text-decoration: none;
+}
+
+.event-management-body-head-nav-links a:hover
+{
+	color: lightgrey;
+	text-decoration: none;
+}
+
+.event-management-body-content-manage
+{
+	margin: 0 auto;
+	width: 70%;
+}
+
+.event-management-body-content-manage-form
+{
+	margin: 20px;
+	border: 1px solid grey;
+	padding: 10px;
+}
+
+.event-management-body-content-manage-form h2
+{
+	margin-bottom: 10px;
+}
+
+.event-management-body-content-manage-form table
+{
+	width: 100%;
+	table-layout: fixed;
+}
+
+.event-management-body-content-manage-form td
+{
+	vertical-align: top;
+	padding-right: 10px;
+}
+
+.event-management-body-content-manage-form input:not([type=submit]):not([type=reset]), .event-management-body-content-manage-form textarea
+{
+	width: 100%;
+}
+
+.event-management-body-content-manage-form textarea
+{
+	height: 100px;
+}
