@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 	$id = $_GET['id'];
 	$code = $_GET['code'];
 	

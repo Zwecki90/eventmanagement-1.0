@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 	function get_site_host($s, $use_forwarded_host=false)
 	{
 		$ssl = (!empty($s['HTTPS']) && $s['HTTPS'] == 'on') ? true:false;

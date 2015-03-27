@@ -1,4 +1,4 @@
-﻿<form action="#" class="event-management-body-content-register-form">
+<form action="#" class="event-management-body-content-register-form">
 	<table>
 		<tr>
 			<td class="event-management-body-content-register-form-table-labels">

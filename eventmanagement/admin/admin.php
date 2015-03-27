@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 	if (!isset($_SESSION['user']))
 	{
 		return printf("<div class=\"event-management-body-content-text-container\">Es ist ein Fehler aufgetreten: Sie sind nicht angemeldet!</div>");
@@ -59,7 +59,7 @@
 	</form>
 	<div class="event-management-body-content-manage-event-list">
 		<?php
-			$stmt = $db->prepare('SELECT e.id AS eventid, e.title, e.description, e.date, e.max_count, COUNT(p.id) AS p_count FROM event e LEFT JOIN participation p ON e.id = p.ptr2eventid WHERE ptr2owner = :userid AND e.date - NOW() > 0 GROUP BY e.title ORDER BY e.date;');
+			$stmt = $db->prepare('SELECT e.id AS eventid, e.title, e.description, e.date, e.max_count, COUNT(p.id) AS p_count FROM event e LEFT JOIN participation p ON e.id = p.ptr2eventid WHERE ptr2owner = :userid AND e.date >= NOW() GROUP BY e.title ORDER BY e.date;');
 			$stmt->bindParam(':userid', $user->id, PDO::PARAM_INT);
 			$stmt->execute();
 			

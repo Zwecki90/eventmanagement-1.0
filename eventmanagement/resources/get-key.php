@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 	$config = parse_ini_file('../config.ini', true);
 	require_once './includes/db-connect.php';
 	require_once './includes/functions.php';
@@ -31,5 +31,11 @@
 	
 	$id = $db->lastInsertId();
 	
-	mail($email, 'Registrierung abschließen', 'Hallo,\n\num die Registrierung abzuschließen, klicken Sie bitte auf den folgenden Link:n\n'.url_origin($_SERVER).'/eventmanagement/index.php?id='.$id.'&code='.$code, 'FROM:no-replay@'.get_site_host($_SERVER));
-    return printf("<div class=\"event-management-body-content-text-container\">Um die Registrierung abzuschließen, rufen Sie Ihr E-Mail-Postfach ab und klicken Sie auf den Aktivierungslink in der soeben an Sie versandten E-Mail.</div>");
+	$link = url_origin($_SERVER).'/eventmanagement/index.php?id='.$id.'&code='.$code;
+	$header = "MIME-Version: 1.0\r\n";
+	$header .= "Content-type: text/html; charset=utf-8\r\n";
+	$header .= "FROM:no-replay@".get_site_host($_SERVER)."\r\n";
+	$header .= "Reply-To: karowflorian@yahoo.de\r\n";
+	$header .= "X-Mailer: PHP ". phpversion();
+	mail($email, 'Registrierung abschließen', 'Hallo,<br/><br/>um die Registrierung abzuschließen, klicken Sie bitte auf den folgenden Link:<br/><br/><a href="'.$link.'">'.$link.'</a>', $header);
+	return printf("<div class=\"event-management-body-content-text-container\">Um die Registrierung abzuschließen, rufen Sie Ihr E-Mail-Postfach ab und klicken Sie auf den Aktivierungslink in der soeben an Sie versandten E-Mail.</div>");

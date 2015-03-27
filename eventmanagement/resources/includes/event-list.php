@@ -1,4 +1,4 @@
-﻿<div class="event-management-body-content-list">
+<div class="event-management-body-content-list">
 	<?php
 		if (empty($user) && isset($_SESSION['user']) && unserialize($_SESSION['user'])->access > 0)
 		{
@@ -10,7 +10,7 @@
 
 		if ($stmt->rowCount())
 		{
-			$stmt = $db->prepare('SELECT e.id AS eventid, e.title, e.description, e.date, e.max_count, COUNT(p.id) AS p_count FROM event e LEFT JOIN participation p ON e.id = p.ptr2eventid WHERE e.date - NOW() > 0 GROUP BY e.title ORDER BY e.date;');
+			$stmt = $db->prepare('SELECT e.id AS eventid, e.title, e.description, e.date, e.max_count, COUNT(p.id) AS p_count FROM event e LEFT JOIN participation p ON e.id = p.ptr2eventid WHERE e.date >= NOW() GROUP BY e.title ORDER BY e.date;');
 			$stmt->execute();
 			
 			if ($stmt->rowCount() < 1)

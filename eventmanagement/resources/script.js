@@ -1,4 +1,4 @@
-﻿$(document).ready(function() {
+$(document).ready(function() {
 	$.ajaxSetup({
 		statusCode: {
 			404: function() {
@@ -95,7 +95,7 @@ function onEventManagementBodyHeadLoginFormSubmit(e)
 		data: form.serialize(),
 		type: 'post',
 		success: function (data, status, jqXHR) {
-			if (data !== '﻿success')
+			if (data !== 'success')
 			{
 				return alert(data);
 			}
@@ -163,7 +163,7 @@ function onEventManagementBodyContentRegisterFormSubmit(e)
 				password.focus();
 				return alert('Fehler: Die Passwörter stimmen nicht überein!');
 			}
-			else if (data === "﻿error_email_used")
+			else if (data === "error_email_used")
 			{
 				email.focus();
 				return alert('Fehler: Die angegebene Email-Adresse ist bereits in Benutzung!');
@@ -186,7 +186,7 @@ function onEventManagementBodyListEventCancelParticipationSubmit(e)
 		data: form.serialize(),
 		type: 'post',
 		success: function (data, status, jqXHR) {
-			if (data !== "﻿﻿success")
+			if (data !== "success")
 				return alert(data);
 			
 			location.reload();
@@ -206,15 +206,15 @@ function onEventManagementBodyListEventParticipateSubmit(e)
 		data: form.serialize(),
 		type: 'post',
 		success: function (data, status, jqXHR) {
-			if (data === "﻿limit_reached_error")
+			if (data === "limit_reached_error")
 			{
 				alert('Fehler: Das Teilnehmerlimit wurde bereits erreicht!');
 			}
-			else if (data === "﻿already_part_error")
+			else if (data === "already_part_error")
 			{
 				alert('Fehler: Sie nehmen bereits an der Veranstaltung teil!');
 			}
-			else if (data !== "﻿﻿success")
+			else if (data !== "success")
 				return alert(data);
 			
 			location.reload();
@@ -234,15 +234,15 @@ function onEventManagementBodyContentManageFormSubmit(e)
 		data: form.serialize(),
 		type: 'post',
 		success: function (data, status, jqXHR) {
-			if (data === "﻿error_no_login")
+			if (data === "error_no_login")
 			{
 				alert('Fehler: Sie sind nicht eingeloggt!');
 			}
-			else if (data === "﻿error_no_access")
+			else if (data === "error_no_access")
 			{
 				alert('Fehler: Sie haben keinen Zugriff auf diese Funktion!');
 			}
-			else if (data !== "﻿﻿success")
+			else if (data !== "success")
 				return alert(data);
 			
 			location.reload();
@@ -319,15 +319,15 @@ function onEventManagementBodyListEventFormDeleteButton(e)
 		data: $(form).serialize(),
 		type: 'post',
 		success: function (data, status, jqXHR) {
-			if (data === "﻿error_no_login")
+			if (data === "error_no_login")
 			{
 				alert('Fehler: Sie sind nicht eingeloggt!');
 			}
-			else if (data === "﻿error_no_access")
+			else if (data === "error_no_access")
 			{
 				alert('Fehler: Sie haben keinen Zugriff auf diese Funktion!');
 			}
-			else if (data !== "﻿success")
+			else if (data !== "success")
 				return alert(data);
 			
 			location.reload();
